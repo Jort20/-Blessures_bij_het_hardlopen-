@@ -1,0 +1,61 @@
+"PERSON_ID"	"NAME"	"DIAGNOSE"	"DATE_START"	"DATE_END"	"TIME_LOSS"	"LOCATION_INJURY"	"SIDE"	"TYPE"	"OCCURENCE"	"REMARKS"	"ID"
+1	"DRUNA1"	"Kuit "	20-MAR-12	03-APR-12	14	"kuit"	""	""	""	""	1
+1	"DRUNA1"	"voet(verstappen)"	10-DEC-12	17-DEC-12	7	"voet (verstapt)"	""	""	""	""	2
+1	"DRUNA1"	"lies"	24-MAR-13	30-SEP-13	190	"lies"	""	""	""	""	3
+19	"DRUNA2"	"Achillespees"	03-OCT-11	23-DEC-11	81	"?"	""	""	""	""	4
+19	"DRUNA2"	"Heup"	22-MAR-12	12-JAN-13	296	"heup"	""	""	""	""	5
+19	"DRUNA2"	"enkel/rug"	04-FEB-13	01-MAR-13	25	"enkel/rug"	""	""	""	""	6
+19	"DRUNA2"	"kuit/schenen"	21-MAR-13	31-MAR-13	10	"kuit/schenen"	""	""	""	""	7
+20	"DRUNA3"	"rug"	26-MAR-12	07-APR-12	12	"rug"	""	""	""	""	8
+20	"DRUNA3"	"voet"	27-JAN-13	28-FEB-13	32	"voet"	""	""	""	""	9
+21	"DRUNB1"	"knie"	14-AUG-12	21-AUG-12	7	"knie"	""	""	""	""	10
+21	"DRUNB1"	"Achilles pees"	19-FEB-13	26-FEB-13	7	"Achilles pees"	""	""	""	""	11
+2	"DRUNE1"	"Onderbeen/Achillespees"	09-NOV-11	22-DEC-11	43	"Onderbeen/achillespees"	"links"	"Peesblessure"	"overbelasting"	"Hij heeft een halve-marathon gelopen. Daarna heeft hij een paar dagen last. Een paar dagen niets aangegeven en vervolgens een revalidatietraining gekregen."	12
+2	"DRUNE1"	"knie, (peesletsel, ontsteking)"	13-MAR-13	07-MAY-13	55	"Knie"	"links"	"Peesblessure"	"overbelasting"	""	13
+3	"DRUNE2"	"Onderbeen/Achillespees"	27-DEC-11	27-APR-12	122	"Onderbeen/achillespees"	"Links"	"anders| overbelasting(vocht) "	"overbelasting"	""	14
+3	"DRUNE2"	"Onderbeen/Achillespees"	28-JAN-13	24-FEB-13	27	"Onderbeen/achillespees"	"links"	"anders| Niet bekend"	"overbelasting"	"Volgens eindvragenlijst klachten tot 24-2. In maart en april komen enkele keren nog wat lichte klachten voor, maar lijken training niet te beinvloeden. Op 29-1 geeft ze in haar dagboek al aan dat ze last heeft van kuit en achillespees. In de eindvragenlijst geeft ze aan dat het tijdens een wedstrijd is ontstaan, dit zou dan op 27-01-2013 zijn geweest, dus 28-01-2013 ontstaan."	15
+4	"DRUNF1"	"Onderbeen/Achillespees"	01-OCT-11	30-NOV-11	60	"Onderbeen/achillespees"	"rechts"	"anders| stressfactor"	"overbelasting"	""	16
+4	"DRUNF1"	"Knie"	05-JUN-12	09-JUL-12	34	"Knie"	"?"	""	""	"Einddatum lastig. Tot eind juli wordt er veel gefietst/kracht gedaan. Daarna een tijd geen info, vakantie?"	17
+4	"DRUNF1"	"Voet"	09-NOV-12	25-NOV-12	16	"voet"	""	"plotseling"	"verstuiking enkel"	""	18
+4	"DRUNF1"	"Onderrug/Heiligbeen/Bekken"	26-NOV-12	21-JAN-13	57	"Onderrug/Heiligbeen/Bekken"	"Links"	"anders| Discopathie"	"overbelasting"	""	19
+4	"DRUNF1"	"???"	01-FEB-13	23-MAR-13	50	""	""	""	""	"Bijna 2 maand revalidatie training, maar niet te vinden waarom.."	20
+4	"DRUNF1"	"Heup/Lies"	30-APR-13	26-AUG-13	118	"Heup/Lies"	"Links"	"anders| Aspecifiek"	"overbelasting"	"Van 15-8 tot 26-8 op vakantie. Wat is einddatum? Voor of na vakantie?"	21
+5	"DRUNH1"	"Onderbeen/Achillespees"	06-NOV-11	15-FEB-12	101	""	"rechts"	"ander letsel aan het bot"	"overbelasting"	"Einddatum komt uit eindvragenlijst, niet in dagboek terug te vinden."	22
+5	"DRUNH1"	"Knie"	05-JAN-13	05-MAR-13	59	"Knie"	"Links"	"anders| overbelasting"	"overbelasting"	"In periode van 2 maanden aantal keren enkele dagen last: 5/1-10/1  29/1 5/2 27/2- 5/3. Wel of geen blessure?"	23
+5	"DRUNH1"	"enkel"	19-MAR-13	29-MAR-13	10	""	""	""	""	""	24
+5	"DRUNH1"	"Onderbeen/Achillespees"	17-APR-13	16-JUL-13	90	"achilles"	"links"	"Peesletsel/scheur/ontsteking/bursitis"	"overbelasting"	""	25
+7	"DRUNJ1"	"last van kuit"	19-OCT-11	21-NOV-11	33	""	""	""	""	"vage klachten.. Kuitklachten bleven steeds terug komen Valt dit onder blessure? Ik denk het niet, misschien een categorie 'overige klachten' of zo maken."	26
+6	"DRUNJ1"	"Voet/teen"	26-JAN-12	09-MAR-12	43	""	""	"Peesletsel/scheur/ontsteking/bursitis"	"overbelasting"	""	27
+6	"DRUNJ1"	"last van kuit"	02-OCT-12	11-OCT-12	9	""	""	""	""	"Valt dit onder blessure? Ik denk het niet, misschien een categorie 'overige klachten' of zo maken."	28
+6	"DRUNJ1"	"Scheen"	21-MAR-13	21-JUL-13	122	"scheen"	"links"	"fractuur"	"overbelasting"	"Ontstaan is in dagboek terug te vinden bij 21-3. In eindvragenlijst staat 28-2"	29
+7	"DRUNJ2"	"Heup"	07-DEC-11	28-DEC-11	21	"heup"	"links"	""	""	""	30
+7	"DRUNJ2"	"achilles"	09-JAN-12	04-FEB-12	26	"achilles"	""	""	""	""	31
+7	"DRUNJ2"	"last??"	21-AUG-12	28-AUG-12	7	""	""	""	""	"Ik denk dat deze ook onder overig valt en niet onder blessures"	32
+9	"DRUNM1"	"Enkel/voet"	08-DEC-11	09-OCT-12	306	"enkel"	"rechts"	"Peesletsel/scheur/ontsteking/bursitis"	"overbelasting"	""	33
+10	"DRUNM2"	"Hak"	22-APR-13	30-SEP-13		"slijmbeurs"	"links"	"Peesletsel/scheur/ontsteking/bursitis"	"overbelasting"	""	34
+11	"DRUNM3"	"kuit/scheen"	30-NOV-11	13-JAN-12	44	""	""	""	""	""	35
+11	"DRUNM3"	"acute enkel"	31-DEC-12	09-JAN-13	9	""	""	""	""	""	36
+11	"DRUNM3"	"acute enkel"	16-FEB-13	14-MAR-13	26	""	""	""	""	""	37
+11	"DRUNM3"	"voet"	10-APR-13	15-JUN-13	66	""	""	""	""	""	38
+12	"DRUNN1"	"Voet"	02-JAN-12	10-JAN-12	8	"Voet"	""	""	""	""	39
+12	"DRUNN1"	"Lies"	25-FEB-13	19-APR-13	53	"Lies"	""	""	""	""	40
+23	"DRUNO1"	"Bil"	17-JAN-12	01-MAR-12	44	"bil"	"rechts"	""	""	""	41
+23	"DRUNO1"	"Onderrug/Bekken"	01-MAY-12	01-AUG-12	92	"onderrug/bekken"	"links"	""	""	""	42
+24	"DRUNR1"	"Knie"	15-OCT-12	13-MAY-13	210	"knie/scheen"	"links"	""	""	""	43
+13	"DRUNS1"	"Onderbeen/Achillespees"	01-MAY-11	16-OCT-11	168	"onderbeen/achilles"	""	""	""	""	44
+13	"DRUNS1"	"Onderbeen/Achillespees"	01-MAR-12	20-APR-12	50	"onderbeen/achilles"	""	""	""	""	45
+13	"DRUNS1"	"knie"	08-APR-13	17-APR-13	9	"Knie"	""	""	""	""	46
+13	"DRUNS1"	"Achilles"	19-MAY-13	06-JUL-13	48	"Achilles"	""	""	""	""	47
+14	"DRUNS2"	"Tibialis/achilles "	18-OCT-11	07-NOV-11	20	"tibialis/achilles klachten"	""	""	""	""	48
+14	"DRUNS2"	"Hamstring/Gluteus"	28-SEP-12	12-OCT-12	14	"Hamstring/Gluteus"	""	""	""	""	49
+15	"DRUNT1"	"Knie"	31-OCT-11	11-NOV-11	11	"knie"	""	""	""	""	50
+15	"DRUNT1"	"Knie"	17-NOV-12	28-NOV-12	11	"knie/tractus"	""	""	""	""	51
+15	"DRUNT1"	"Achilles"	26-MAR-13	20-MAY-13	55	"achilles"	""	""	""	""	52
+16	"DRUNV1"	"Knie"	08-MAR-12	31-MAR-12	23	"knie"	""	""	""	""	53
+16	"DRUNV1"	"Kuit"	02-JUN-12	26-JUN-12	24	"kuit"	"Rechts"	""	""	""	54
+16	"DRUNV1"	"Enkel"	26-FEB-13	03-APR-13	36	"enkel"	"rechts"	""	""	""	55
+16	"DRUNV1"	"Kuit"	13-MAY-13	24-MAY-13	11	"kuit"	"links"	""	""	""	56
+17	"DRUNW2"	"Heup"	01-JUN-11	01-SEP-11	92	"Heup/Lies "	""	"Peesletsel/scheur/ontsteking/bursitis"	""	""	57
+17	"DRUNW2"	"Achilles"	20-AUG-12	26-OCT-12	67	""	""	""	""	""	58
+17	"DRUNW2"	"Kuit?"	29-APR-13	09-MAY-13	10	""	""	""	""	""	59
+18	"DRUNY1"	"voet???"	16-AUG-12	07-SEP-12	22	"voet/teen"	""	""	""	""	60
