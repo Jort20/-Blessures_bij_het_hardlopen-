@@ -10,11 +10,22 @@ df_filtered = pd.read_csv('hardloop.tsv', delimiter='\t')
 # Filter de rijen waarin 'TQR' gelijk is aan 0 of niet ingevuld
 df = df_filtered[df_filtered['TQR'].notna() & (df_filtered['TQR'] != 0)]
 
+# Voeg een nieuwe kolom 'HOUR' toe aan het DataFrame op basis van de 'MOMENT' kolom
+df['HOUR'] = np.where(df['MOMENT'] == 'A', 0, 12)
+
+# Zet de 'DATES' kolom om naar datetime
+df['DATES'] = pd.to_datetime(df['DATES'], format='%d-%b-%y')
+
+# Voeg de 'HOUR' kolom toe aan de 'DATES' kolom
+df['DATES'] = df['DATES'] + pd.to_timedelta(df['HOUR'], unit='h')
+
+# Verwijder de 'HOUR' kolom omdat deze niet langer nodig is
+df = df.drop('HOUR', axis=1)
+
 # Laat alleen de gewenste kolommen zien
 df = df[["DATES","MOMENT", "TQR", "RPE", "DURATION", "SLEEP", "PERSON_ID", "ID", "TQR_OF_RPE"]]
 
 # Voeg een nieuwe kolom 'COLOR' toe aan het DataFrame op basis van de datumperiodes
-df['DATES'] = pd.to_datetime(df['DATES'], format='%d-%b-%y')
 df['blessure'] = 'laat_alles_zien'  # Standaardkleur
 
 df['ACUTE_WORKLOAD'] = df['DURATION'] * df['RPE']
