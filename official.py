@@ -44,7 +44,7 @@ for index, row in injury_info_df.iterrows():
     condition = (df['PERSON_ID'] == row['PERSON_ID']) & (df['DATES'] >= start_date) & (df['DATES'] <= end_date)
     df.loc[condition, 'blessure'] = row['DIAGNOSE']
 
-def plot_data(person_id, metric, line_color):
+def line_plot_data(person_id, metric, line_color):
     # Maak een kopie van het DataFrame om de originele gegevens ongewijzigd te houden
     selected_person_data = df.copy()[df['PERSON_ID'] == person_id]
     
@@ -105,14 +105,18 @@ def scatter_plot_data(person_id, line_color, sleep_limit, sleep_metric='SLEEP'):
     if person_id is not None:
         selected_person_data_2 = selected_person_data_2[selected_person_data_2['PERSON_ID'] == person_id]
 
+    # Bepaal de grootte van de rondjes op basis van een nieuwe kolom 'SIZE'
+    selected_person_data_2['SIZE'] = selected_person_data_2['ACUTE_WORKLOAD']  # Hier kun je een andere kolom kiezen als grootte
+
     scatter_plot = selected_person_data_2.hvplot.scatter(
-        x='ACUTE_WORKLOAD', y=sleep_metric, color='blessure',
+        x='ACUTE_WORKLOAD', y=sleep_metric, color='blessure', size='SIZE',alpha=0.7,
         title=f'Scatterplot van {sleep_metric} vs Workload',
         ylabel=f'{sleep_metric} (uren)', xlabel='WORKLOAD',
         grid=True, width=800, height=400,
         line_color=line_color
     )
     return scatter_plot
+
 
 def plot_chronic_ratio(person_id, metric, line_color):
     selected_person_data_3 = df.copy()
@@ -174,12 +178,12 @@ metric_selector_chronic_ratio = pn.widgets.Select(name='Selecteer Meting waarde 
 # Voeg de plot en de keuzelijsten toe aan de app
 @pn.depends(person_id=person_selector_1, metric=metric_selector_1, line_color=color_picker_1)
 def update_plot_1(person_id, metric, line_color):
-    plot = plot_data(person_id, metric, line_color)
+    plot = line_plot_data(person_id, metric, line_color)
     return plot
 
 @pn.depends(person_id=person_selector_2, metric=metric_selector_2, line_color=color_picker_2)
 def update_plot_2(person_id, metric, line_color):
-    plot = plot_data(person_id, metric, line_color)
+    plot = line_plot_data(person_id, metric, line_color)
     return plot
 
 
@@ -210,9 +214,15 @@ def update_chronic_ratio_plot(person_id, line_color, metric):
 
 
 
-app = pn.Column(
-    '# Interactieve Lijn-, Box- en Scatterplots',
-    '## TQR, RPE, en DUUR per dag per ID',
+header = pn.pane.Markdown("# Interactive Lijn-, Box- en Scatterplots\n## TQR, RPE, en DUUR per dag per ID")
+
+sidebar = pn.Column(
+    'Info about page',
+
+)
+
+# Define the main content layout
+main_content = pn.Column(
     pn.Row(
         person_selector_1,
         metric_selector_1,
@@ -231,13 +241,14 @@ app = pn.Column(
         update_box_plot
     ),
     pn.Row(
-        sleep_metric_selector,
         person_selector_3,
+
+        sleep_metric_selector,
         color_picker_3,
         update_scatter_plot  # Scatter plot here
     ),
     pn.Row(
-        sleep_limit_radio,  # RadioButtonGroup widget here
+        sleep_limit_radio,
     ),
     pn.Row(
         person_selector_5,
@@ -247,10 +258,14 @@ app = pn.Column(
     )
 )
 
+# Combine header, sidebar, and main content
+app_layout = pn.Column(
+    header,
+    pn.Row(
+        sidebar,
+        main_content,
+    )
+)
 
-
-
-# Start de Panel-app
-app.show()
-#app.save(filename='interactive_plots.html', embed=True)
-
+# Start the Panel app
+app_layout.show()
