@@ -47,7 +47,7 @@ for index, row in injury_info_df.iterrows():
 def line_plot_data(person_id, metric, line_color):
     # Maak een kopie van het DataFrame om de originele gegevens ongewijzigd te houden
     selected_person_data = df.copy()[df['PERSON_ID'] == person_id]
-    # for loop zodat de titels kloppen met de grafieken hun informatie
+    # if statement zodat de titels kloppen met de grafieken hun informatie
     if metric == 'DURATION':
         plot = selected_person_data.hvplot.line(
             x='DATES', y='DURATION', groupby='blessure',
@@ -71,11 +71,12 @@ def line_plot_data(person_id, metric, line_color):
     return plot
 
 def box_plot_data(person_id, metric):
+    # als person id niet niks is laat dan de juiste geselecteerde ID zien in de plot
     if person_id is not None:
         filtered_df = df[df['PERSON_ID'] == person_id]
     else:
         filtered_df = df.copy()
-    # maak een for loop om te zorgen dat de titels kloppen bij de juiste ploy
+    # maak een if statement om te zorgen dat de titels kloppen bij de juiste plot
     if metric == 'RPE':
         box_plot = filtered_df[filtered_df['RPE'] > 0].hvplot.box(y='RPE', by='MOMENT', title='Boxplot van RPE per MOMENT')
     elif metric == 'TQR':
@@ -96,12 +97,12 @@ sleep_limit_radio = pn.widgets.RadioButtonGroup(name='Limiteer Sleep', options=s
 def scatter_plot_data(person_id, line_color, sleep_limit, sleep_metric='SLEEP'):
     selected_person_data_2 = df.copy()
 
-    # Apply sleep limit filter
+    # pas sleep limit filter toe als 15 of als slaap limiet is ingested dan word de data voor een gedeelte gebeerd op basis van de limiet
     if sleep_limit == "15 als slaap limiet":
         selected_person_data_2 = selected_person_data_2[selected_person_data_2[sleep_metric] <= 15]
     elif sleep_limit == "10 als slaap limiet":
         selected_person_data_2 = selected_person_data_2[selected_person_data_2[sleep_metric] <= 10]
-
+# als person id niet niks is laat dan de juiste geselecteerde ID zien in de plot
     if person_id is not None:
         selected_person_data_2 = selected_person_data_2[selected_person_data_2['PERSON_ID'] == person_id]
 
@@ -145,8 +146,6 @@ def plot_chronic_ratio(person_id, metric, line_color):
     return plot_workload
 
 
-
-
 # Lijst met beschikbare PERSON_ID's
 person_ids = df['PERSON_ID'].unique().tolist()
 
@@ -158,25 +157,33 @@ metric_workload = ['TQR','RPE']
 box_metric_selector = pn.widgets.Select(name='Selecteer Meting (Boxplot)', options=metrics_box)
 
 # Maak keuzelijsten voor PERSON_ID, color en meting widgets
+# ID selector 1 widget
 person_selector_1 = pn.widgets.Select(name='Selecteer PERSON by ID (Plot 1)', options=person_ids)
+# metric selector 1 widget gebaseerd op metrics variabel
 metric_selector_1 = pn.widgets.Select(name='Selecteer Meting waarde (Plot 1)', options=metrics)
 
+# ID selector 2 widget
 person_selector_2 = pn.widgets.Select(name='Selecteer PERSON by ID (Plot 2)', options=person_ids)
+
+# metric selector 2 widget gebasserd op de variabel metrics 
 metric_selector_2 = pn.widgets.Select(name='Selecteer Meting waarde (Plot 2)', options=metrics)
 
+# ID selector 3 widget voor de boxplot
 person_selector_3 = pn.widgets.Select(name='Selecteer PERSON by ID (Scatter Plot)', options=person_ids_options)
+# id selector 4 widget voor de scatterplot 
 person_selector_4 = pn.widgets.Select(name='Selecteer PERSON by ID (box Plot)', options=person_ids_options)
-
+# sleep metric widget voor de scatterplot gebasserd op metric scatter
 sleep_metric_selector = pn.widgets.Select(name='Selecteer SLEEP Meting', options=metric_scatter, value='SLEEP')
 
+# color pickers voor de plots 1 eerste line plot 2 tweede line plot 3 scatterplot
 color_picker_1 = pn.widgets.ColorPicker(name='Kies Kleur', value='#1f77b4')  # Standaardkleur
 color_picker_2 = pn.widgets.ColorPicker(name='Kies Kleur', value='#ff7f0e')  # Standaardkleur
 color_picker_3 = pn.widgets.ColorPicker(name='Kies Kleur', value='#ff7f0e')  # Standaardkleur
 
-person_selector_5 = pn.widgets.Select(name='Selecteer PERSON by ID (Chronische Ratio)', options=person_ids_options)
-color_picker_4 = pn.widgets.ColorPicker(name='Kies Kleur', value='#1f77b4')  # Standaardkleur
-metric_selector_chronic_ratio = pn.widgets.Select(name='Selecteer Meting waarde (Chronische Ratio)', options=metric_workload)
+
 # Voeg de plot en de keuzelijsten toe aan de app
+# pn depends zorgt dat de plot elke keer geupdate word wanneer een widget word aangeklikt
+# alle update plot functies updaten de plot
 @pn.depends(person_id=person_selector_1, metric=metric_selector_1, line_color=color_picker_1)
 def update_plot_1(person_id, metric, line_color):
     plot = line_plot_data(person_id, metric, line_color)
@@ -190,7 +197,7 @@ def update_plot_2(person_id, metric, line_color):
 
 @pn.depends(person_id=person_selector_4.param.value, metric=box_metric_selector)
 def update_box_plot(person_id, metric):
-    # laat alle ID's zien
+    # laat alle ID's zien standaard in de widget
     if person_id == "Alle ID's":
         box_plot = box_plot_data(None, metric)
     else:
@@ -200,21 +207,13 @@ def update_box_plot(person_id, metric):
 
 @pn.depends(person_id=person_selector_3.param.value, line_color=color_picker_3.param.value, sleep_limit=sleep_limit_radio.param.value, sleep_metric=sleep_metric_selector.param.value)
 def update_scatter_plot(person_id, line_color, sleep_limit, sleep_metric):
-    # laat alle ID's zien
+    # laat alle ID's zien standaard in de widget
     if person_id == "Alle ID's":
         scatter_plot = scatter_plot_data(None, line_color, sleep_limit, sleep_metric)
     else:
         scatter_plot = scatter_plot_data(person_id, line_color, sleep_limit, sleep_metric)
     return scatter_plot
 
-@pn.depends(person_id=person_selector_5.param.value, line_color=color_picker_4.param.value, metric=metric_selector_chronic_ratio)
-def update_chronic_ratio_plot(person_id, line_color, metric):
-    # laat alle ID's zien
-    if person_id == "Alle ID's":
-        plot_workload = plot_chronic_ratio(None, metric, line_color)
-    else:
-        plot_workload = plot_chronic_ratio(person_id, metric, line_color)
-    return plot_workload
 
 
 # header van de app en de app zelf word hier gemaakt
@@ -233,6 +232,7 @@ sidebar_tab = pn.Column(
 )
 research_tab = pn.pane.Markdown("## Research\n Hier zijn links naar de onderzoeken met deze dataset.\n\n[Increase in the Acute: Chronic Workload Ratio relates to Injury Risk in Competitive Runners](https://research.rug.nl/en/publications/increase-in-the-acute-chronic-workload-ratio-relates-to-injury-ri)\n\n[Prediction of Running Injuries from Training Load:a Machine Learning Approach.](https://research.hanze.nl/ws/portalfiles/portal/16171742/eTelemed2017Predictionofinjuries.pdf)")
 
+# maken plots dashboard
 tabs = pn.Tabs(
     ("Plots", pn.Column(
         pn.Row(
@@ -261,17 +261,12 @@ tabs = pn.Tabs(
         pn.Row(
             sleep_limit_radio,
         ),
-        pn.Row(
-            person_selector_5,
-            metric_selector_chronic_ratio,
-            color_picker_4,
-            update_chronic_ratio_plot
-        ),
+
     )),
     ("Info", sidebar_tab),
     ("Research", research_tab)  # Nieuwe tab toegevoegd
 )
-
+# app layout maken met tabs
 app_layout = pn.Column(
     header,
     tabs
