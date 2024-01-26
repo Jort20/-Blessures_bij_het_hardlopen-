@@ -4,6 +4,12 @@
 
 This dashboard provides visualizations and insights into running data, including information about individual runners and their injuries.
 
+## Project Structure
+
+- **raw_data**: Original collected data, without any modification.
+- **EDA_analyse**: Exploratory analysis in Rmd or Jupyter Notebook and generated pdf or html.
+- **dashboard.py**: The dashboard file.
+
 ## Features
 
 - Line plots showing various metrics over time for individual runners.
