@@ -9,6 +9,7 @@ This dashboard provides visualizations and insights into running data, including
 - **raw_data**: Original collected data, without any modification.
 - **EDA_analyzes**: Exploratory analysis in Rmd or Jupyter Notebook and generated pdf or html.
 - **dashboard.py**: The dashboard file.
+- -**hosting**: the hostingsplan.txt for the dashboard 
 
 ## Features
 
