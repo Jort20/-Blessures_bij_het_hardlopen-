@@ -43,13 +43,13 @@ Visit http://localhost:500 in your web browser to interact with the dashboard.
 
 ## plots
 ### Line Plots
-#### Plot 1
+#### Line Plot 1
 
     Select a person by ID.
     Choose a metric for the y-axis.
     Pick a line color.
 
-#### Plot 2
+#### Line Plot 2
 
     Select another person by ID.
     Choose a different metric for the y-axis.
