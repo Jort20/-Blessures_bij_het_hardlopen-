@@ -58,14 +58,14 @@ Visit http://localhost:500 in your web browser to interact with the dashboard.
 #### Box Plots
 
     Select a person by ID or choose "All IDs."
-    Choose a metric for the box plot.
+    Choose a metric to compare with for y-axis for the box plot.
 
 #### Scatter Plot
 
     Select a person by ID or choose "All IDs."
     Choose a line color.
     Select a sleep limit option.
-    Choose a sleep metric.
+    Choose a metric to compare with for the y-axis.
 
 ## Info
 
