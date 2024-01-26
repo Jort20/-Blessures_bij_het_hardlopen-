@@ -1,0 +1,20 @@
+# Virtual environment
+venv/
+
+# Python cache bestanden
+__pycache__/
+
+# Gecompileerde Python bestanden
+*.pyc
+
+# macOS bestand met weergave-instellingen
+.DS_Store
+
+# IntelliJ IDEA configuratiemap
+.idea/
+
+# Logbestanden
+*.log
+
+# Gegevensbestanden die dynamisch worden gegenereerd
+*.csv
