@@ -1,0 +1,23 @@
+Voordat je je dashboard kunt hosten, zijn er enkele stappen nodig om het klaar te maken voor productie. 
+
+Allereerst is het essentieel om je code te optimaliseren en ervoor te zorgen dat het goed werkt, zodat het probleemloos op de website kan draaien. Vervolgens moet je een hostingprogramma kiezen, bijvoorbeeld Apache2 of Nginx, om je website daadwerkelijk online te zetten. Daarnaast is het belangrijk om een virtuele omgeving te creëren en deze te koppelen aan het hostingplatform. Dit garandeert dat alle benodigde bibliotheken correct aanwezig zijn. 
+
+Zorg er vervolgens voor dat er een HTTPS-sleutel aanwezig is om de veiligheid van de website te waarborgen. Om ervoor te zorgen dat de website kan omgaan met een groeiend aantal gebruikers, kun je bijvoorbeeld load balancing implementeren. Hierdoor wordt het netwerkverkeer over meerdere servers verdeeld, waardoor geen enkele server overbelast raakt. 
+
+Nadat deze stappen zijn doorlopen, is je website gereed om gehost te worden. Volg de richtlijnen van het hostingplatform met betrekking tot wat er allemaal nodig is voor het dashboard, zoals koppelingen naar de virtuele omgeving, verwijzingen naar je Python-code en de bijbehorende bestanden. Hiermee zorg je ervoor dat je dashboard soepel en veilig draait op het gekozen hostingplatform. 
+
+Welke hostingplatform kiezen apache of Nginx  
+
+De keuze tussen Nginx en Apache hangt af van verschillende factoren, waaronder de mogelijkheden voor het uploaden van bestanden, naast andere overwegingen. 
+
+Zowel Nginx als Apache hebben hun eigen voor- en nadelen. Als je verwacht dat je website veel verkeer zal genereren en je vaak met het uploaden van bestanden te maken krijgt, kan Nginx de betere keuze zijn. Nginx staat bekend om zijn efficiënte omgang met gelijktijdige verzoeken en heeft goede prestaties bij het verwerken van uploads. 
+
+Aan de andere kant is Apache, naar mijn mening, gebruiksvriendelijker en biedt het flexibiliteit in configuratie. Apache heeft een lange geschiedenis en er is veel expertise beschikbaar, wat handig kan zijn bij het oplossen van problemen met betrekking tot uploads en andere serverfuncties. 
+
+Persoonlijk zou ik, gezien mijn verwachting van een beperkt aantal gebruikers op mijn website, neigen naar Apache2 vanwege de gebruiksvriendelijkheid. Echter, als uploads een belangrijk onderdeel zijn van jouw dashboard en je verwacht veel verkeer, is het de moeite waard om de extra efficiëntie van Nginx te kiezen, omdat het goed is in het afhandelen van uploads en gelijktijdige verzoeken. 
+
+Indien de website vertraging ondervindt als gevolg van een toenemend aantal gebruikers, zijn er verschillende optimalisatiemogelijkheden beschikbaar. Bijvoorbeeld, als je Apache2 gebruikt, kan het activeren van de mod_cache-module een goede stap zijn. Deze module maakt het mogelijk om specifieke content op te slaan, waardoor herhaaldelijke generatie bij elk verzoek wordt voorkomen. Dit zorgt voor een vermindering van de serverbelasting en versnelt de laadtijden voor de gebruikers. 
+
+Een andere overweging is het inzetten van een Content Delivery Network (CDN). Een CDN verspreidt statische bestanden, zoals afbeeldingen, stylesheets en scripts, over diverse servers wereldwijd. Hierdoor wordt de serverbelasting verminderd en worden laadtijden geoptimaliseerd, ongeacht de locatie van de gebruiker. 
+
+ 
