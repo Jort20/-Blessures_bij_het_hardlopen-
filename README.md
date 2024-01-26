@@ -61,12 +61,6 @@ Visit http://localhost:500 in your web browser to interact with the dashboard.
     Select a sleep limit option.
     Choose a sleep metric.
 
-#### Chronic Ratio Plot
-
-    Select a person by ID or choose "All IDs."
-    Choose a line color.
-    Choose a metric for the chronic ratio plot.
-
 ## Info
 
     The dataset includes information about dates, moments, TQR, RPE, duration, sleep, person IDs, and more.
