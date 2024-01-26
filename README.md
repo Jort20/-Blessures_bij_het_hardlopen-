@@ -27,6 +27,19 @@ Make sure you have the following Python libraries installed:
 ```bash
 pip install pandas panel hvplot holoviews numpy
 ```
+### Library Usage
+
+This repository utilizes various Python libraries to perform different tasks. Here's an overview of what each library does:
+
+- **Pandas:** A powerful library for data analysis in Python, allowing manipulation and analysis of data.
+
+- **Panel:** An open-source library for building interactive web apps in Python. It enables easy creation of interactive dashboards using Python and visualizing your data.
+
+- **hvPlot:** A HoloViews-based library that provides a quick way to create interactive visualizations of Pandas DataFrames.
+
+- **Holoviews:** A library that enables you to create complex data visualizations with minimal code, making it easier to communicate insights.
+
+- **NumPy:** A fundamental library for scientific computations in Python, providing powerful numerical operations for efficient data processing.
 
 ### Installation
 
