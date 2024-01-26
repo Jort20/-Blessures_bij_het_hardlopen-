@@ -7,7 +7,7 @@ import numpy as np
 pn.extension()
 
 # read the CSV-file
-df_filtered = pd.read_csv("hardloop.tsv", delimiter="\t")
+df_filtered = pd.read_csv("raw_data/hardloop.tsv", delimiter="\t")
 
 # Filter the rows where 'TQR' is equal to 0 or not filled in
 df = df_filtered[df_filtered["TQR"].notna() & (df_filtered["TQR"] != 0)]
@@ -43,7 +43,7 @@ df["blessure"] = "laat_alles_zien"
 
 df["ACUTE_WORKLOAD"] = df["DURATION"] * df["RPE"]
 # Load injury information from TSV file
-injury_info_df = pd.read_csv("blessures.tsv", sep="\t")
+injury_info_df = pd.read_csv("raw_data/blessures.tsv", sep="\t")
 
 # Convert date columns to datetime format
 injury_info_df["DATE_START"] = pd.to_datetime(
