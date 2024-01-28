@@ -95,7 +95,7 @@ Find related research based on this dataset:
 - [Prediction of Running Injuries from Training Load: a Machine Learning Approach](https://research.hanze.nl/ws/portalfiles/portal/16171742/eTelemed2017Predictionofinjuries.pdf)
 
 # Contact
-Voor meer informatie contacteer dan Jort(j.r.gommers@st.hanze.nl)
+For more information contact Jort(j.r.gommers@st.hanze.nl)
 
 ## Acknowledgments
 
