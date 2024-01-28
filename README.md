@@ -94,8 +94,8 @@ Find related research based on this dataset:
 - [Increase in the Acute: Chronic Workload Ratio relates to Injury Risk in Competitive Runners](https://research.rug.nl/en/publications/increase-in-the-acute-chronic-workload-ratio-relates-to-injury-ri)
 - [Prediction of Running Injuries from Training Load: a Machine Learning Approach](https://research.hanze.nl/ws/portalfiles/portal/16171742/eTelemed2017Predictionofinjuries.pdf)
 
-# contact
-voor meer informatie contacteer dan Jort(j.r.gommers@st.hanze.nl)
+# Contact
+Voor meer informatie contacteer dan Jort(j.r.gommers@st.hanze.nl)
 
 ## Acknowledgments
 
