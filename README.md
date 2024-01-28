@@ -17,7 +17,6 @@ This dashboard provides visualizations and insights into running data, including
 - Line plots showing various metrics over time for individual runners.
 - Box plots for analyzing distributions of metrics across different moments of the day.
 - Scatter plots depicting the relationship between workload and sleep, with the option to filter outliers.
-- Chronic ratio plots to understand the chronic workload and its impact on different metrics.
 
 ## Getting Started
 
