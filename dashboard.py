@@ -347,7 +347,7 @@ def update_scatter_plot(person_id, line_color, sleep_limit, sleep_metric):
 
 
 welcome_message = pn.pane.Markdown(
-    "# Welkom op het Datadashboard van Hardloop Blessures\n"
+    "# Welkom op het Data dashboard van Hardloop Blessures\n"
     "Dit dashboard bevat informatie over hardlopers en hun blessures in de tab plots.\n"
     "research verteld over de onderzoeken van deze data en info verteld de info over wat wat betekent van de variablen "
 )
