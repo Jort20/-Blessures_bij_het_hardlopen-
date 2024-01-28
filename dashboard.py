@@ -365,8 +365,8 @@ sidebar_tab = pn.Column(
     "#### moment = moment van de dag hardgelopen ochtend of avond \n"
     "#### TQR = mate van inspanning na hardlopen \n"
     "#### RPE = een mate hoe belastend het is tijdens het lopen \n"
-    "#### duration = hoelang die dag is hardgelopen \n"
-    "#### sleep = hoeveel er is geslapen die dag door de hardloper \n"
+    "#### duration = hoelang die dag is hardgelopen in minuten \n"
+    "#### sleep = hoeveel uren er zijn geslapen die dag door de hardloper \n"
     "#### person_id = de persoon waar het omgaat er zijn 24 personen.",
 )
 research_tab = pn.pane.Markdown(
