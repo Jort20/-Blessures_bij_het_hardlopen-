@@ -86,12 +86,19 @@ Visit http://localhost:500 in your web browser to interact with the dashboard.
     The dataset includes information about dates, moments, TQR, RPE, duration, sleep, person IDs, and more.
     There are 24 unique person IDs in the dataset.
 
-## afbeeldingen dashboard 
+## Pictures dashboard 
+
+#### Welcomes page
 ![welkoms pagina](https://github.com/Jort20/-Blessures_bij_het_hardlopen-/blob/main/fotos_website/Screenshot%202024-01-28%20at%2020.39.12.png)
+#### Info page
 ![Info pagina](https://github.com/Jort20/-Blessures_bij_het_hardlopen-/blob/main/fotos_website/Screenshot%202024-01-28%20at%2020.39.24.png)
+#### Research page
 ![research pagina](https://github.com/Jort20/-Blessures_bij_het_hardlopen-/blob/main/fotos_website/Screenshot%202024-01-28%20at%2020.39.32.png)
+#### Plots page part 1
 ![plots pagina 1](https://github.com/Jort20/-Blessures_bij_het_hardlopen-/blob/main/fotos_website/Screenshot%202024-01-28%20at%2020.40.16.png)
+#### Plots page part 2
 ![plots pagina 2](https://github.com/Jort20/-Blessures_bij_het_hardlopen-/blob/main/fotos_website/Screenshot%202024-01-28%20at%2020.40.29.png)
+
 ## Research
 
 Find related research based on this dataset:
