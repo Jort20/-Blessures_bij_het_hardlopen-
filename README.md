@@ -100,4 +100,4 @@ For more information contact Jort(j.r.gommers@st.hanze.nl)
 
 Special thanks to the contributors and researchers who made this project possible.
 
-
+![afbeelding](https://github.com/Jort20/-Blessures_bij_het_hardlopen-/blob/main/fotos_website/Screenshot%202024-01-28%20at%2020.39.12.png)
